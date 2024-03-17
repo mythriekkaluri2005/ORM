@@ -24,28 +24,32 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 ```
-models.py
-
 from django.db import models
 from django.contrib import admin
-class footballplayer (models.Model):
-    name=models.CharField(max_length=15)
-    weight=models.IntegerField()
-    age=models.IntegerField()
-    members=models.CharField(max_length=20)
 
-class footballplayerAdmin (admin.ModelAdmin):
-    list_display=('name','weight','age','members')
+# Create your models here.
+class Railway(models.Model):
+    train_no = models.IntegerField(primary_key=True)
+    train_name = models.CharField(max_length=50)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+    start_station_code = models.CharField(max_length=10)
+    end_station_code = models.CharField(max_length=10)
 
-admin.py
+class RailwayAdmin(admin.ModelAdmin):
+    list_display = ('train_no','train_name','start_date','end_date','start_station_code',)
 
 from django.contrib import admin
-from .models import footballplayer,footballplayerAdmin
-admin.site.register(footballplayer,footballplayerAdmin)
+from .models import Railway, RailwayAdmin
+# Register your models here.
+admin.site.register(Railway, RailwayAdmin)
 ```
 ## OUTPUT
-![image](https://github.com/mythriekkaluri2005/ORM/assets/150231422/1f9efaff-2dfe-45cc-acf9-81f4ca389d07)
 
+![output](./project2/output.png)
+
+## SERVER OUTPUT:
+![serveroutput](./project2/serverourpur.png)
 
 
 ## RESULT
