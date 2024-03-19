@@ -1,8 +1,8 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 18-03-24
 
 ## AIM
-To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
+To develop a Django application to store and retrieve data from a Railway Database using Object Relational Mapping(ORM).
 
 ## Entity Relationship Diagram
 
@@ -21,7 +21,7 @@ Create a new app in Django project
 Enter the code for admin.py and models.py
 
 ### STEP 4:
-Execute Django admin and create details for 10 books
+Execute Django admin and create details for 10 Railways
 
 ## PROGRAM
 ```
